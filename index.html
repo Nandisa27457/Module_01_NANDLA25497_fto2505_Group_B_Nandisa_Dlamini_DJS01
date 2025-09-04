@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="styles.css" />
+    <title>Podcast App</title>
+  </head>
+  <body>
+    <header class="header-container">
+      <span class="header-content">
+        <img src="Images/podcasts_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" />
+        <h2>Podcast App</h2>
+        <!-- <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script> -->
+        <ion-icon
+          class="search-icon"
+          name="search"></ion-icon>
+      </span>
+    </header>
+
+    <div class="main-container">
+      <label for="genres">Filter by:</label>
+      <select
+        id="genres"
+        name="genres">
+        <option value="">All genres</option>
+        <option value="afrotech">Genre 1</option>
+        <option value="house">Genre 2</option>
+        <option value="techno">Genre 3</option>
+        <option value="trance">Genre 4</option>
+      </select>
+
+      <select
+        id="genres"
+        name="genres">
+        <option value="">Recently Updated</option>
+        <option value="house">Most Popular</option>
+        <option value="techno">Newest</option>
+      </select>
+
+      <div
+        id="podcasts"
+        class="podcast-container"></div>
+    </div>
+    <script
+      type="module"
+      src="scripts.js"></script>
+  </body>
+</html>
