@@ -18,7 +18,16 @@ body{
 .genre{
   color:#c5a880d2;
   background-color:#2B1B17;
-  
+
+}
+img.search{
+  height: 40px;
+  margin-left:1100px;
+}
+.image-logo{
+  height: 40px;
+  position: relative;
+  top:12px;
 }
 
 #podcasts {
@@ -222,4 +231,9 @@ select#genres{
       display: flex;
       flex-direction: column;
     }
-}
+    .content-container{
+  display:flex;
+  flex-direction: column;
+    }
+
+    }
