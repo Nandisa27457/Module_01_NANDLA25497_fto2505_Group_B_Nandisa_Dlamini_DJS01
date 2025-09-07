@@ -42,10 +42,27 @@
         <option value="techno">Newest</option>
       </select>
 
-      <div
-        id="podcasts"
-        class="podcast-container"></div>
-    </div>
+      <!-- Container -->
+<div id="podcasts"></div>
+
+<!-- Modal -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+     <h2 id="modal-title"></h2>
+     <h3 class="desc-label">Description</h3>
+     <div class="content-container">
+    <img id="modal-image" src="" alt="">
+    <p id="modal-description"></p>
+     </div>
+    <p class="genre-container"><strong>Genres:</strong> <span id="modal-genres"></span></p>
+    <p><strong>Updated:</strong> <span id="modal-updated"></span></p>
+     <p><strong>Seasons:</strong> <span id="modal-seasons"></span></p>
+     <h3>Season Details</h3>
+    <ul id="modal-season-list"></ul>
+  </div>
+</div>
+
     <script
       type="module"
       src="scripts.js"></script>
