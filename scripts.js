@@ -2,7 +2,21 @@
 
 import { podcasts, genres, seasons } from "./data.js";
 
-// ---- Podcast Model ----
+// ---- Podcast Class ----
+
+/**
+ * Podcast model representing podcast data and helper methods.
+ */
+  /**
+   * @param {Object} data - Podcast data object
+   * @param {string} data.id - Podcast ID
+   * @param {string} data.title - Podcast title
+   * @param {string} data.description - Podcast description
+   * @param {number} data.seasons - Number of seasons
+   * @param {string} data.image - URL of podcast cover image
+   * @param {Array<string>} data.genres - List of genre IDs
+   * @param {string|Date} data.updated - Last updated date
+   */
 class Podcast {
   constructor({
     id,
@@ -26,6 +40,10 @@ class Podcast {
     this.seasonDetails = match ? match.seasonDetails : [];
   }
 
+   /**
+   * Get a comma-separated string of genre names for the podcast.
+   * @returns {string} Genre names joined by commas.
+   */
   getGenreNames() {
     return this.genres
       .map((genreId) => {
@@ -37,6 +55,13 @@ class Podcast {
 }
 
 // ---- UI Class ----
+/**
+ * PodcastUI handles rendering podcast cards and modal interactions.
+ */
+  /**
+   * @param {string} containerId - DOM element ID where podcasts will be rendered
+   * @param {string} modalId - DOM element ID for the modal
+   */
 class PodcastUI {
   constructor(containerId, modalId) {
     this.container = document.getElementById(containerId);
